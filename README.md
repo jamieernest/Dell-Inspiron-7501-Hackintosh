@@ -1,2 +1,2 @@
 # Dell-Inspiron-750x-Hackintosh
-Hackintosh for Dell Inspiron 750x
+MacOS running on Dell Inspiron 750x
