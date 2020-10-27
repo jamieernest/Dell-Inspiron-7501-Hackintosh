@@ -1,5 +1,5 @@
 # Dell Inspiron 7501 Hackintosh
-
+<strong>UNFINSHED, PLANNED TO BE DONE BY 1/7/2020</strong>
 <p>
     <img style="border-radius: 8px" src="Assets/background.png">
 </p>
@@ -40,16 +40,16 @@
 
 ### STEP
 
-> You can follow [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/) as it very detailed and easy to understand.
+> You can follow [Dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/) as it is very detailed and easy to understand.
 
 #### TL;DR
 
-- Prepair an Mac installer in USB with bootloader you choice ( Use [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/) to create it )
+- Prepair an Mac installer in USB with [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - Go to the [releases](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/releases) and download the lastest version
 - Replace EFI folder in USB EFI partition with the EFI folder from the zip file
 - Go into config.plist with [ProperTree](https://github.com/corpnewt/ProperTree) and change the SystemProductName (Type), SystemSerialNumber (Serial), MLB (Board Serial) and SystemUUID (SmUUID) which is generated using [GenSMBIOS.](https://github.com/corpnewt/GenSMBIOS) (Press 1, then 3 then type MacBookPro16,1)
 - Boot into USB and select MacOS installer
-- In the installer open disk utility and format the SSD to APFS <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong>
+- In the installer open disk utility and format the SSD to APFS. <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong>
 - When you are booted in you need to mount EFI partition and replace it with USB's EFI using [Hackintool](https://github.com/headkaze/Hackintool/releases) or [MountEFI](https://github.com/corpnewt/MountEFI)
 - For Intel AX201 users, follow [Intel's guide](https://openintelwireless.github.io) to init your wifi
 
@@ -64,5 +64,5 @@ For now when I use sleep there will be a lot of heat coming out of the laptop (p
 - [Dortania](https://github.com/dortania) for the guides
 - [headkaze](https://github.com/headkaze) for providing the very useful [Hackintool](https://github.com/headkaze/Hackintool/releases)
 - And all other authors that mentioned or not mentioned in this repo
-- [tctien342](https://github.com/tctien342) this build is inspired from [his project](https://github.com/tctien342/Dell-Inspiron-7591-Hackintosh), and some of the SSDTs and kexts are from him, big thanks to him
+- [tctien342](https://github.com/tctien342) this build is inspired from [his project](https://github.com/tctien342/Dell-Inspiron-7591-Hackintosh), and some of the SSDTs and kexts are from him, readme.md is based on his, big thanks to him
 -  and [you](https://cdn.weeb.sh/images/rJl3BcTuG.gif) for reading/following/using this :D
