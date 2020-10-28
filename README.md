@@ -9,7 +9,7 @@
 | Model     | MacBookPro16,1      | Version        | Catalina 10.15.7      |
 | :-------- | :------------------ | :------------- | :------------------ |
 | Processor | Intel Core i7-10750H | Graphics       | UHD Graphics 630    |
-| Memory    | 2999MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D412-Q11 NVMe (included with laptop) |
+| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D412-Q11 NVMe (included with laptop) |
 | Audio     | Realtek ALC236      | WiFi/Bluetooth | Dell DW1560 (swapped)/Intel AX201(default card)             |
 
 ## About build
@@ -64,8 +64,8 @@ For now when I use sleep there will be a lot of heat coming out of the laptop (p
 
 - [Apple](https://apple.com/) for MacOS
 - [acidanthera](https://github.com/acidanthera) for providing almost all kexts and drivers
-- [corpnewt](https://github.com/corpnewt) for GibMacOS, GenSMBIOS and MountEFI
-- [Dortania](https://github.com/dortania) for the guides
+- [corpnewt](https://github.com/corpnewt) for [GibMacOS](https://github.com/corpnewt/gibMacOS), [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and [MountEFI](https://github.com/corpnewt/MountEFI)
+- [Dortania](https://github.com/dortania) for the [guides](https://dortania.github.io/OpenCore-Install-Guide/)
 - [headkaze](https://github.com/headkaze) for providing the very useful [Hackintool](https://github.com/headkaze/Hackintool/releases)
 - [jwise](https://github.com/jwise) for [HoRNDIS](https://github.com/jwise/HoRNDIS/releases)
 - And all other authors that mentioned or not mentioned in this repo
