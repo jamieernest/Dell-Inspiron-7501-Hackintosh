@@ -1,5 +1,4 @@
 # Dell Inspiron 7501 Hackintosh
-<strong>UNFINSHED, PLANNED TO BE DONE BY 1/11/2020</strong>
 <p>
     <img style="border-radius: 8px" src="Assets/background.png">
 </p>
