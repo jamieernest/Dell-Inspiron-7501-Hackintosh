@@ -5,11 +5,11 @@
 
 ## System configuration
 
-| Model     | MacBookPro16,1      | Version        | Catalina 10.15.7      |
+| Model     | MacBookPro16,1      | Version        | Catalina 10.15.7/Big Sur 11.0.1      |
 | :-------- | :------------------ | :------------- | :------------------ |
 | Processor | Intel Core i7-10750H | Graphics       | UHD Graphics 630    |
-| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D412-Q11 NVMe (included with laptop) |
-| Audio     | Realtek ALC236      | WiFi/Bluetooth | Dell DW1560 (swapped)/Intel AX201(default card)             |
+| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D512-Q11 NVMe (included with laptop) |
+| Audio     | Realtek ALC236      | WiFi/Bluetooth | Dell DW1560 (swapped)/Intel AX201(default card)|
 
 ## About build
 
@@ -19,16 +19,17 @@
 #### Performance
 
 - [Geekbench 5](https://browser.geekbench.com/v5/cpu/4411543): 1097 SingleCore, 4244 MultiCore
-- Battery: 48wh with 65% brightness (2 NVMe), I got 5h ish screen time when suffering web and using OneNote/VSCode
+- Battery: 48wh with 50% brightness (2 NVMe), I got 5h ish screen time when surfing the web and using OneNote/VSCode
 
 #### Not Working
 
 - Things that may never work:
   - Discrete GPU (Disabled)
   - Fingerprint (Disabled)
-  - Internal Microphone
+  - Internal and Combo Jack Microphone
   - HDMI Port (USB-C works but no video output)
-  - Trackpad Gestures (Two, Three, Four fingers dont work, LR click and tracking works fine)
+  - <del>Trackpad Gestures (Two, Three, Four fingers dont work, LR click and tracking works fine)</del> Fixed in 0.6.3!
+  - <strong>THE TRACKPAD FIX MAY BREAK BOOTING INTO WINDOWS, REMOVE `Rename OSID to XSID` AND `Rename _OSI to XOSI` PATCHES FROM `config.plist ` AND `SSDT-XOSI` IF IT BREAKS BOOTING WINDOWS</strong>
 
 ## Installation
 
@@ -44,7 +45,7 @@
 
 #### TL;DR
 
-- Prepair an Mac installer in USB with [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+- Prepare an Mac installer in USB with [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - Go to the [releases](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/releases) and download the lastest version
 - Replace EFI folder in USB EFI partition with the EFI folder from the zip file
 - If you are using intel wifi add the intel wifi kexts from the folder to EFI/OC/Kexts and do the same if you are using a Broadcomm card. Check [dortania's guide]() if you are unclear which one you are using. <small>I havent tested AirportItlwm yet, so this is just in case it doesnt work in the installer</small>
@@ -63,6 +64,7 @@ For now when I use sleep there will be a lot of heat coming out of the laptop (p
 
 - [Apple](https://apple.com/) for MacOS
 - [acidanthera](https://github.com/acidanthera) for providing almost all kexts and drivers
+- [alexandred](https://github.com/alexandred) for VoodooI2C
 - [corpnewt](https://github.com/corpnewt) for [GibMacOS](https://github.com/corpnewt/gibMacOS), [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) and [MountEFI](https://github.com/corpnewt/MountEFI)
 - [Dortania](https://github.com/dortania) for the [guides](https://dortania.github.io/OpenCore-Install-Guide/)
 - [headkaze](https://github.com/headkaze) for providing the very useful [Hackintool](https://github.com/headkaze/Hackintool/releases)
