@@ -29,7 +29,7 @@
   - Internal and Combo Jack Microphone
   - HDMI Port (USB-C works but no video output)
   - <del>Trackpad Gestures (Two, Three, Four fingers dont work, LR click and tracking works fine)</del> Fixed in 0.6.3!
-  - <strong>THE TRACKPAD FIX MAY BREAK BOOTING INTO WINDOWS, REMOVE `Rename OSID to XSID` AND `Rename _OSI to XOSI` PATCHES FROM `config.plist ` AND `SSDT-XOSI` IF IT BREAKS BOOTING WINDOWS</strong>
+  - <del><strong>THE TRACKPAD FIX MAY BREAK BOOTING INTO WINDOWS, REMOVE `Rename OSID to XSID` AND `Rename _OSI to XOSI` PATCHES FROM `config.plist ` AND `SSDT-XOSI` IF IT BREAKS BOOTING WINDOWS</strong></del> Should be fixed in 0.6.4
 
 ## Installation
 
@@ -58,7 +58,7 @@
 - For Intel wifi users, follow [Intel's guide](https://openintelwireless.github.io) to init your wifi
 
 #### Sleep
-For now when I use sleep there will be a lot of heat coming out of the laptop (probably from dGpu even if I turned it off using -wegnoegpu and the SSDTs) but if anyone has a fix feel free to reply to the issue
+<del>For now when I use sleep there will be a lot of heat coming out of the laptop (probably from dGpu even if I turned it off using -wegnoegpu and the SSDTs) but if anyone has a fix feel free to reply to the issue</del> Fixed in 0.6.4!
 
 ## Credits
 
