@@ -13,7 +13,7 @@
 
 ## About build
 
-- Intel wifi card works (no WPA Enterprise afaik or Airdrop/iMessage(can be fixed, I'll cover later) etc):
+- Intel wifi card works <del>(no WPA Enterprise afaik or Airdrop/iMessage(can be fixed, I'll cover later) etc)</del> Everything now works with AirportItlwm.kext:
   - Follow this: https://openintelwireless.github.io
 
 #### Performance
@@ -48,8 +48,9 @@
 - Prepare an Mac installer in USB with [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - Go to the [releases](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/releases) and download the lastest version
 - Replace EFI folder in USB EFI partition with the EFI folder from the zip file
-- If you are using intel wifi add the intel wifi kexts from the folder to EFI/OC/Kexts and do the same if you are using a Broadcomm card. Check [dortania's guide]() if you are unclear which one you are using. <small>I havent tested AirportItlwm yet, so this is just in case it doesnt work in the installer</small>
+- If you are using intel wifi add the intel wifi kexts from the folder to EFI/OC/Kexts and do the same if you are using a Broadcomm card. Check [dortania's guide]() if you are unclear which one you are using. 
 - Go into config.plist with [ProperTree](https://github.com/corpnewt/ProperTree) and change the SystemProductName (Type), SystemSerialNumber (Serial), MLB (Board Serial) and SystemUUID (SmUUID) which is generated using [GenSMBIOS.](https://github.com/corpnewt/GenSMBIOS) (Press 1, then 3 then type MacBookPro16,1)
+- If you are using a Broadcomm card enable the quirk"ExtendBTFeatureFlags"
 - Press Ctrl+R in ProperTree and select EFI/OC to register the wifi kexts you added to the config.plist
 - Boot into USB and select MacOS installer
 - In the installer open disk utility and format the SSD to APFS. <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong>
