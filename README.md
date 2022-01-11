@@ -52,8 +52,7 @@
 - If you are using a Broadcomm card enable the quirk "ExtendBTFeatureFlags"
 - Press Ctrl+R in ProperTree and select EFI/OC to register the wifi kexts you added to the config.plist
 - Boot into USB and select MacOS installer
-- In the installer open disk utility and format the SSD to APFS. <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong>
-- If you're using Intel wifi or other non Broadcomm card you can use your android device and use USB tethering for the installation. 
+- In the installer open disk utility and format the SSD to APFS. <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong> 
 - When you are booted in you need to mount EFI partition and replace it with USB's EFI using [Hackintool](https://github.com/headkaze/Hackintool/releases) or [MountEFI](https://github.com/corpnewt/MountEFI)
 
 #### Sleep
