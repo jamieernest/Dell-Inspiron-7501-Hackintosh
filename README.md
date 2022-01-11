@@ -3,23 +3,24 @@
     <img style="border-radius: 8px" src="Assets/background.png">
 </p>
 
+## If you are still here, I would really like to thank you for your support even though I have not updated this repo for more than half a year. I hope there is better to come!
+
 ## System configuration
 
-| Model     | MacBookPro16,1      | Version        | Catalina 10.15.7/Big Sur 11.0.1      |
+| Model     | MacBookPro16,1      | Version        | Catalina 10.15.7/Big Sur 11.1/Monterey 12.1      |
 | :-------- | :------------------ | :------------- | :------------------ |
 | Processor | Intel Core i7-10750H | Graphics       | UHD Graphics 630    |
-| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D512-Q11 NVMe (included with laptop) |
+| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D512-Q11 NVMe (included with laptop, models with ) |
 | Audio     | Realtek ALC236      | WiFi/Bluetooth | Dell DW1560 (swapped)/Intel AX201(default card)|
 
 ## About build
 
-- Intel wifi card works (no airdrop ofc) with AirportItlwm.kext:
-  - Follow this: https://openintelwireless.github.io
+- My neofetch shows Intel UHD Graphics 630, Radeon RX Vega 56, which is because eGPUs are supported! I have connected a Blackmagic EGPU Pro. 
 
 #### Performance
 
 - [Geekbench 5](https://browser.geekbench.com/v5/cpu/4411543): 1097 SingleCore, 4244 MultiCore
-- Battery: 48wh with 50% brightness (2 NVMe), I got 5h ish screen time when surfing the web and using OneNote/VSCode when voltage turned down to 5w PL1 and 7w PL2 (I'll do a tutorial later)
+- Battery: 48wh with 50% brightness (2 NVMe), I got 2.5h ish screen time when surfing the web and using OneNote/VSCode
 
 #### Not Working
 
@@ -27,7 +28,7 @@
   - Discrete GPU (Disabled)
   - Fingerprint (Disabled)
   - Internal and Combo Jack Microphone
-  - HDMI Port (USB-C works but no video output)
+  - HDMI Port (USB-C works)
 
 ## Installation
 
@@ -43,21 +44,20 @@
 
 #### TL;DR
 
-- Prepare an Mac installer in USB with [GibMacOS](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
+- Prepare an Mac installer in USB with [macrecovery](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/)
 - Go to the [releases](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/releases) and download the lastest version
 - Replace EFI folder in USB EFI partition with the EFI folder from the zip file
-- If you are using intel wifi add the proper intel wifi kexts from the zip file in the folder to EFI/OC/Kexts and do the same if you are using a Broadcomm card. Check [dortania's guide]() if you are unclear which one you are using. 
-- Go into config.plist with [ProperTree](https://github.com/corpnewt/ProperTree) and change the SystemProductName (Type), SystemSerialNumber (Serial), MLB (Board Serial) and SystemUUID (SmUUID) which is generated using [GenSMBIOS.](https://github.com/corpnewt/GenSMBIOS) (Press 1, then 3 then type MacBookPro16,1)
+- If you are using Intel wifi go to [Dell-Inspiron-7501-Hackintosh/Intel Wifi](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/tree/master/Intel%20Wifi/) select the correct folder for the MacOS version you are installing and copy the kexts to EFI/OC/Kexts and do the same, but from [the Broadcomm folder](https://github.com/jamieernest/Dell-Inspiron-7501-Hackintosh/tree/master/Broadcomm%20Wifi) if you are using a Broadcomm card. Check [dortania's guide](https://dortania.github.io/OpenCore-Install-Guide/find-hardware.html#network-controller-models) if you are unclear which one you are using. 
+- Open EFI/OC/config.plist with [ProperTree](https://github.com/corpnewt/ProperTree) and change the SystemSerialNumber (Serial), MLB (Board Serial) and SystemUUID (SmUUID) which is generated using [GenSMBIOS.](https://github.com/corpnewt/GenSMBIOS) (Press 1, then 3 then type MacBookPro16,1)
 - If you are using a Broadcomm card enable the quirk "ExtendBTFeatureFlags"
 - Press Ctrl+R in ProperTree and select EFI/OC to register the wifi kexts you added to the config.plist
 - Boot into USB and select MacOS installer
 - In the installer open disk utility and format the SSD to APFS. <strong>YOU WILL LOSE ALL THE DATA THAT IS ON IT</strong>
-- If you're using intel wifi or other non broadcomm card you can use your android device and use USB tethering for the installation. 
+- If you're using Intel wifi or other non Broadcomm card you can use your android device and use USB tethering for the installation. 
 - When you are booted in you need to mount EFI partition and replace it with USB's EFI using [Hackintool](https://github.com/headkaze/Hackintool/releases) or [MountEFI](https://github.com/corpnewt/MountEFI)
-- For Intel wifi users, follow [Intel's guide](https://openintelwireless.github.io) to init your wifi
 
 #### Sleep
-<del>For now when I use sleep there will be a lot of heat coming out of the laptop (probably from dGpu even if I turned it off using -wegnoegpu and the SSDTs) but if anyone has a fix feel free to reply to the issue</del> Fixed in 0.6.4!
+Sleep works, however when it wakes from sleep the dGPU goes nuts and causes a lot of heat, I don't recommend using sleep.
 
 ## Credits
 
