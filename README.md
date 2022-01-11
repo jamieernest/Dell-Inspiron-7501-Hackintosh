@@ -10,7 +10,7 @@
 | Model     | MacBookPro16,1      | Version        | Catalina 10.15.7/Big Sur 11.1/Monterey 12.1      |
 | :-------- | :------------------ | :------------- | :------------------ |
 | Processor | Intel Core i7-10750H | Graphics       | UHD Graphics 630    |
-| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D512-Q11 NVMe (included with laptop, models with ) |
+| Memory    | 2993MHz DDR4 1x8GB + 2666MHz 1x32GB  | OS Disk        | LiteOn CL1-3D512-Q11 NVMe (included with laptop, models with SK Hynix PC711 not supported.) |
 | Audio     | Realtek ALC236 (Speaker + HP Jack + Sleep working from custom AppleALC.kext)      | WiFi/Bluetooth | Dell DW1560 (swapped)/Intel AX201(default card)|
 
 ## About build
